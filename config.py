@@ -36,7 +36,7 @@ currency_type   = "$"   # Currency Symbol to show when calculating cost to run j
 #   can use whichever GPIO you prefer/have available.
 
 ### Outputs
-gpio_heat = 23  # Switches zero-cross solid-state-relay
+gpio_heat = 11  # Switches zero-cross solid-state-relay
 
 ### Thermocouple Adapter selection:
 #   max31855 - bitbang SPI interface
@@ -87,7 +87,7 @@ stop_integral_windup = True
 ########################################################################
 #
 #   Simulation parameters
-simulate = True
+simulate = False
 sim_t_env      = 60.0   # deg C
 sim_c_heat     = 500.0  # J/K  heat capacity of heat element
 sim_c_oven     = 5000.0 # J/K  heat capacity of oven
@@ -119,7 +119,7 @@ emergency_shutoff_temp = 2264 #cone 7
 # If the current temperature is outside the pid control window,
 # delay the schedule until it does back inside. This allows for heating
 # and cooling as fast as possible and not continuing until temp is reached.
-kiln_must_catch_up = True
+kiln_must_catch_up = False
 
 # This setting is required. 
 # This setting defines the window within which PID control occurs.
